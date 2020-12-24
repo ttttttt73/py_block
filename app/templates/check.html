@@ -1,13 +1,30 @@
 <!doctype html>
 <title>Check File</title>
+<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link rel="stylesheet" href="style.css">
 
 <body style="text-align: center">
-  <h1>Result</h1>
+  <h1><p class=Brandname title = "This is a 백석대학교 web page project from the laboratory of  professor Yunhee Kang" > BlockChain </p></h1>
+  <hr>
+  <nav>
+
+    <ul>
+        <li><a href="index.html">홈</li>
+        <li><a href="upload.html">Upload</li>
+       <li><a href="info.html">Uploaded</li>
+       <li><a href="check.html">Check</li>
+     
+  </ul>
+
+</nav>
+  <h1 style="font-size: 30px;">Result</h1>
   <p>
     {% if is_exist %}
       <h2><b>{{ filename }}</b> <font color="blue">exist</font> in blockchain!.</h2>
-      <a href="{{ url_for('get_file_info', filehash=filehash) }}">Show file info</a><br>
-      <a href="{{ url_for('get_file', filename=filename) }}">Get file</a><br>
+      <a style="font-size: 25px;"; href="{{ url_for('get_file_info', filehash=filehash) }}">Show file info</a><br>
+      <a style="font-size: 25px;"; href="{{ url_for('get_file', filename=filename) }}">Get file</a><br>
     {% else %}
       <h2><b>{{ filename }}</b> <font color="red">doesn't exist</font> in blockchain!.</h2>
     {% endif %}

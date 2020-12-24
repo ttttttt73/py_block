@@ -1,11 +1,29 @@
 <!doctype html>
 <title>Uploaded</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="style.css">
 <body style="text-align: center">
-  <h1>Uploaded successfully</h1>
+  <h1><p class=Brandname title = "This is a 백석대학교 web page project from the laboratory of  professor Yunhee Kang" > BlockChain </p></h1>
+  <hr>
+  <nav>
+
+    <ul>
+        <li><a href="index.html">홈</li>
+        <li><a href="upload.html">Upload</li>
+       <li><a href="info.html">Uploaded</li>
+       <li><a href="check.html">Check</li>
+     
+  </ul>
+
+</nav>
+  <h1 style="font-size: 30px;">Uploaded successfully</h1>
   <p>
     <b>{{ filename }}</b> is uploaded successfully.<br>
+    <p style="font-size: 30px;" >
     <a href="{{ url_for('get_file', filename=filename) }}">GET FILE</a>
+    </p>
   </p>
   <h2>file's hash is <a href="{{ url_for('get_file_info', filehash=filehash) }}">{{ filehash }}</a></h2>
 </body>

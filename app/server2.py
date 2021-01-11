@@ -137,6 +137,7 @@ def encrypt():
 
     return {'iv':iv, 'ciphertext':ct}
 
+
 @app.route('/decrypt', methods=['POST'])
 def decrypt():
     '''a = request.args.get('', '')
